@@ -21,3 +21,4 @@ $ python manage.py runserver
 ```
 
 ## See Result
+- import postman collection from `library/doc/Library.postman_collection.json`
