@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "2380d365-6422-44b7-a80b-8b0016532785",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "249097",
+		"_collection_link": "https://warped-spaceship-4018-1.postman.co/workspace/kopega~47f2d8e1-8f3b-4266-8dc1-c7a30f91fd01/collection/249097-2380d365-6422-44b7-a80b-8b0016532785?action=share&source=collection_link&creator=249097"
+	},
+	"item": [
+		{
+			"name": "Student - Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"andi\",\n        \"email\": \"andi@gmail.com\",\n        \"password\": \"pass12345\"   \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Librarians - Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"ani\",\n        \"email\": \"ani@gmail.com\",\n        \"password\": \"pass12345\"   \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/librarians/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"librarians",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"rashya\",\n    \"password\": \"pass12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book - Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book - Borrowing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkyMTg4OTU2LCJpYXQiOjE2OTIxODg2NTYsImp0aSI6ImExMjNhYjc2ZWUxOTRkMTc4Yjk4ZWEzZmYwMTVlZmI2IiwidXNlcl9pZCI6Mn0.fzJyzPfieXFBKQ9CkurBDPe42XnnD_gJeE7oF9_uJLo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/borrowing-records/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"borrowing-records",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow - New",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkyMTg5NTE0LCJpYXQiOjE2OTIxODkyMTQsImp0aSI6IjVhZWFmZTE4OGJlZjRmZWFhMzY5MjczYTkyMzRmNzdhIiwidXNlcl9pZCI6Mn0.lCNzDF1BB_vF7arEKDN4u94YgIXYiNVLKsBLeRCPIEs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/borrow/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"borrow",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
